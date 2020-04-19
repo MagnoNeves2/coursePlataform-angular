@@ -1,6 +1,6 @@
-#Anotações sobre Angular e suas utilização na prática!
+# Anotações sobre Angular e suas utilização na prática!
 
-###Teoria
+### Teoria
 
 ---
 
@@ -33,7 +33,7 @@ São itens de página completo (ou seja, um arquivo HTML, um arquivo CSS e um ar
 
 ---
 
-###Prática
+### Prática
 ![imagem para prática](https://cio.com.br/wp-content/uploads/2019/11/por-que-a-linguagem-rust-esta-em-ascensao.jpg)
 
 **Criando um arquivo**
