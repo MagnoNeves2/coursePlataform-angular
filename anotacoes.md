@@ -70,3 +70,14 @@ Para **subir/ativar** o servidor da aplicação, basta rodar as seguintes linhas
 ~~~
 ng serve -o
 ~~~
+
+**Criando um componente**
+
+Para **criar** um componente, basta rodar as seguintes linhas de comando:
+
+~~~
+
+ng generate component [nome do componente]
+
+~~~
+<em>Dica: O comando curto é ➡ ng g c [nome do componente].</em>
