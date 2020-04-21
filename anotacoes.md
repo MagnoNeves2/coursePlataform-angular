@@ -99,7 +99,9 @@ npm i popper.js --save
 Após a instalação, é necessário a aconfiguração para a execução do Bootstrap no projeto. Para isso, basta entrar no arquivo **angular.json**, ir até a propriedade *styles* e acrescentar o caminho da página de estilo do Bootstrap, que no caso é ➡️ "./node_modules/bootstrap/dist/css/bootstrap.min.css". Em seguida, encaminhar-se até a propriedade *scripts* e acrescentar os caminhos das aplicações que auxiliam na execução do Bootstrap, e que no caso seriam:
 
 ➡️"./node_modules/jquery/dist/jquery.js"
+
 ➡️"./node_modules/bootstrap/dist/js/bootstrap.js"
+
 ➡️"./node_modules/popper.js/dist/umd/popper.min.js"
 
 **Instalando e configurando o Font-Awesome**
