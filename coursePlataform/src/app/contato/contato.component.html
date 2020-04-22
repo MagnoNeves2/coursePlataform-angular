@@ -1,1 +1,56 @@
-<p>contato works!</p>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-8">
+            <!-- Default form contact -->
+            <form class="text-center border border-light p-5" action="#!">
+
+                <p class="h4 mb-4">Contate-nos</p>
+
+                <!-- Name -->
+                <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Nome" required>
+                
+
+                <!-- Email -->
+                <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail" required>
+
+                <!-- Telefone-->
+                <input type="text" id="defaultContactFormTelephone" class="form-control mb-4" placeholder="Telefone">
+
+                <!-- Subject -->
+                <label>Motivo da mensagem</label>
+                <select class="browser-default custom-select mb-4">
+                    <option value="" disabled>Escolha uma opção</option>
+                    <option value="1" selected>Feedback</option>
+                    <option value="2">Reportar um erro</option>
+                    <option value="3">Solicitar atualização</option>
+                    <option value="4">Outro</option>
+                </select>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"
+                        placeholder="Mensagem"></textarea>
+                </div>
+
+                <!-- Copy -->
+                <div class="custom-control custom-checkbox mb-4">
+                    <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+                    <label class="custom-control-label" for="defaultContactFormCopy">Me envie uma cópia da mensagem</label>
+                </div>
+
+                <!-- Send button -->
+                <button class="btn btn-info btn-block" type="submit" id="btnEnviar">Enviar</button>
+
+            </form>
+            <!-- Default form contact -->
+        </div>
+
+        <div class="col-4 imagem">
+            <img src="assets/contato.png" alt="Imagem ilustrativa de um celular">
+        </div>
+
+    </div>
+
+</div>

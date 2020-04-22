@@ -1,4 +1,56 @@
-.parallax{
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
+.imagem > img{
+    width: 100%;
+}
+
+.texto1 {
+    position: absolute;
+    width: 600px;
+    top: 150px;
+    font-family: Righteous;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+}
+
+.texto2{
+    position: absolute;
+    width: 600px;
+    top: 340px;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+}
+
+.texto3{
+    font-family: Righteous;
+    font-size: 36px;
+    line-height: 45px;
+}
+
+.pessoas > img{
+    position: absolute;
+    width: 600px;
+    height: 595px;
+    left: 700px;
+    top: 355px;
+}
+
+.botao{
+    background: linear-gradient(180deg, #DE497D 0%, #E78945 83.33%, #F8AD53 100%);
+    border-radius: 50px;
+}
+
+.curso{
+    width: 300px;
+    height: 300px;
+}
+
+
+
+/* .parallax{
 
     background-image: url('https://i.imgur.com/PEoH72I.jpg');
 
@@ -8,4 +60,4 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */

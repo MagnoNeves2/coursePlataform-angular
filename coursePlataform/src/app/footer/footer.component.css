@@ -1,4 +1,7 @@
-/* footer social icons */
+footer{
+  background: linear-gradient(180deg, rgba(255, 122, 0, 0.7) 0%, rgba(252, 43, 116, 0.7) 55.73%, rgba(163, 0, 117, 0.7) 100%);
+}
+
 
 ul.social-network {
     list-style: none;
