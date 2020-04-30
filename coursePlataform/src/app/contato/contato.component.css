@@ -1,3 +1,8 @@
+.imagem {
+    display: block;
+}
+
 .imagem > img{
     width: 450px;
+    height: 450px;
 }
