@@ -1,12 +1,14 @@
-# Anotações sobre Angular e suas utilização na prática!
+<section style="text-align: center">
 
-### Teoria
+# Anotações sobre Angular e sua utilização na prática! 
+
+## Teoria
 
 ---
 
-
 ![imagem para teoria](https://live.mrf.io/statics/i/ps/amenteemaravilhosa.com.br/wp-content/uploads/2019/01/teoria-da-carga-cognitiva-john-sweller.jpg)
 
+</section>
 
 
 >O que é o **Angular**?
@@ -33,10 +35,16 @@ A estrutura básica do Angular é dividido em:
 
 ---
 
-### Prática (SPA)
+<section style="text-align: center">
+
+## Prática (SPA)
+
 ![imagem para prática](https://cio.com.br/wp-content/uploads/2019/11/por-que-a-linguagem-rust-esta-em-ascensao.jpg)
 
 #### Criando um arquivo
+
+</section>
+<br>
 
 Para **criar** um arquivo angular, basta entrar com a seguinte linha de comando no teminal:
 
@@ -45,8 +53,11 @@ Para **criar** um arquivo angular, basta entrar com a seguinte linha de comando 
 >aparecerá a seguinte pergunta: Would you like to add Angular rounting? Sempre responda sim [y], pois isso irá criar as rotas na sua aplicação. E em seguida perguntará: Which stylesheet format would you like to use? responda CSS, pois essa é a a folha de estilo que utilizamos.
 
 ---
+<section style="text-align: center">
 
 #### Entendendo o arquivo gerado
+
+</section>
 
 Após o sistema processar e gerar o arquivo, aparececá uma pasta com o nome que foi definido e nela irá conter diveras outras pastas e arquivos, em especial, a src. Basicamente, é nela que toda a plicação será rodada e configurada.
 Tanto o arquivo **index.html** e o **styles.css** que lá se encontram são globais, ou seja, tudo o que for colocado lá dentro será passado para toda a aplicação.
@@ -60,7 +71,13 @@ No **index.html** existe uma *tag*:
 
 Que não existe no HTML, e sim foi criada pelo Angular pois todo <em>**novo**</em> componente do Angular recebe o nome de uma *tag*, ou seja, esse \<app-root>\</app-root> é um componente.
 
+<br>
+<section style="text-align: center">
+
 #### Subindo o servidor local da aplicação
+
+</section>
+<br>
 
 Para **subir/ativar** o servidor da aplicação, basta rodar as seguintes linhas de comando:
 <small><em>Obs: Lembrando sempre de, no terminal, estar dentro do arquivo criado</em></small>
@@ -69,7 +86,13 @@ Para **subir/ativar** o servidor da aplicação, basta rodar as seguintes linhas
 ng serve -o
 ~~~
 
+<br>
+<section style="text-align: center">
+
 #### Criando um componente
+
+</section>
+<br>
 
 Para **criar** um componente, basta rodar as seguintes linhas de comando:
 
@@ -80,7 +103,13 @@ ng generate component [nome do componente]
 
 E para desenvolvermos uma SPA, criaremos dois componentes, que no caso são: navbar e footer.
 
+<br>
+<section style="text-align: center">
+
 #### Instalando e configurando o Bootstrap no projeto
+
+</section>
+<br>
 
 Para **instalar** o Bootstrap no projeto basta rodarmos as seguintes linhas de códigos:
 
@@ -96,7 +125,7 @@ npm i popper.js --save
 ~~~
 <small><em>Obs: O termo (--save) significa que estamos pedindo para que salvem essa aplicação no projeto</em></small>
 
-Após a instalação, é necessário a aconfiguração para a execução do Bootstrap no projeto. Para isso, basta entrar no arquivo **angular.json**, ir até a propriedade *styles* e acrescentar o caminho da página de estilo do Bootstrap, que no caso é ➡️ "./node_modules/bootstrap/dist/css/bootstrap.min.css". Em seguida, encaminhar-se até a propriedade *scripts* e acrescentar os caminhos das aplicações que auxiliam na execução do Bootstrap, e que no caso seriam:
+Após a instalação, é necessário a aconfiguração para a execução do Bootstrap no projeto. Para isso, basta entrar no arquivo **angular.json**, ir até a propriedade *styles* e acrescentar o caminho da página de estilo do Bootstrap, que no caso é ➡ "./node_modules/bootstrap/dist/css/bootstrap.min.css". Em seguida, encaminhar-se até a propriedade *scripts* e acrescentar os caminhos das aplicações que auxiliam na execução do Bootstrap, e que no caso seriam:
 
 ➡️"./node_modules/jquery/dist/jquery.js"
 
@@ -104,7 +133,13 @@ Após a instalação, é necessário a aconfiguração para a execução do Boot
 
 ➡️"./node_modules/popper.js/dist/umd/popper.min.js"
 
+<br>
+<section style="text-align: center">
+
 #### Instalando e configurando o Font-Awesome
+
+</section>
+<br>
 
 O Font-Awesome é uma biblioteca de icones, e para **instalar** basta rodar as seguintes linhas de códigos:
 
@@ -120,7 +155,13 @@ Após instalar, caso seja preciso fazer uso dos ícones, basta **importá-los** 
 
 <small><em>Para exportá-los é necessário atribuí-los a uma variavel, por exemplo: faInstagram = faInstagram</em></small>
 
+<br>
+<section style="text-align: center">
+
 #### Funcionamento dos componentes criados
+
+</section>
+<br>
 
 Para que os componentes realmente sejam mostrados e executados em tela, é necessário que sejam informados no arquivo **app.component.html**, já que ele é o nosso HMTL global e é através dele que executaremos nossa aplicação. Isso serve para o *CSS* também, já que que o arquivo **app.component.css** se refere ao CSS global da aplicação. 
 
@@ -134,7 +175,13 @@ Para que os componentes criados realmente sejam executados, precisamos informá-
 
 <em>No caso da SPA, iremos informar as tags do navbar e do footer.</em>
 
+<br>
+<section style="text-align: center">
+
 #### Entendendo e implementando as rotas da aplicação
+
+</section>
+<br>
 
 Para implementarmos rotas dentro da aplicação, é necessário irmos até o arquivo **app-routing.modules.ts** e dentro desse arquivo encontraremos uma constante *routes*, que por padrão do Angular já vem com um array de um módulo chamado <em>**Routes**</em>, e é nesse array que iremos implementar os objetos de rotas, através dos comando: 
 
@@ -162,8 +209,6 @@ Após isso as rotas estarão ativadas, entretanto, somente quando informarmos l�
 ~~~
 routerLink='/[nome do path criado]'
 ~~~
-
-
 
 
 ---
