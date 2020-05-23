@@ -53,7 +53,22 @@
 
             <hr class="mt-5 mb-5">
 
-            <h3 class="text-monospace text-center">Minhas Postagens</h3>
+            <h3 class="text-monospace text-center mb-5">Minhas Postagens</h3>
+
+            <div class="card mb-4" *ngFor="let postagem of listaPostagens">
+                <div class="card-header d-flex">
+
+                    <div class="justify-content-start">
+                        <img class="rounded-circle" src="{{ postagem.imagem }}" alt="Foto do perfil" width="30px">
+                    </div>
+
+                    <h5 class="card-title ml-3">{{ postagem.titulo }}</h5>
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">{{ postagem.texto }}</p>
+                </div>
+            </div>
 
         </div>
 

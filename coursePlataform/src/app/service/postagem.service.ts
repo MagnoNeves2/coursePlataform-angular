@@ -11,7 +11,7 @@ export class PostagemService {
   constructor(private http: HttpClient) { }
 
   getAllPostagens(){
-    return this.http.get('http://localhost:3000/postagens')
+    return this.http.get('http://localhost:3001/Postagem')
   }
 
 
