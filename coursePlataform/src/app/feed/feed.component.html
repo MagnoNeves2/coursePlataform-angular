@@ -56,7 +56,7 @@
 
             <h3 class="text-monospace text-center mb-5">Minhas Postagens</h3>
 
-            <div class="card mb-4" *ngFor="let postagem of listaPostagens">
+            <div class="card mb-4" *ngFor="let postagem of listaPostagens | orderBy : key : reverse">
                 <div class="card-header d-flex">
 
                     <div class="justify-content-start">

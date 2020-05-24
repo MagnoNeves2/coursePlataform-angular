@@ -11,6 +11,8 @@ export class FeedComponent implements OnInit {
 
   listaPostagens: Postagem[]
   postagem: Postagem = new Postagem
+  key = 'id';
+  reverse = true;
 
   constructor(private postagemService: PostagemService) { }
 
