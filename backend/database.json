@@ -1,28 +1,43 @@
 {
-    "Postagem": [
-        {
-            "id": 1,
-            "titulo": "Texto Teste",
-            "texto": "Texto Teste",
-            "imagem": "https://i.imgur.com/1fiyedob.jpg?2"
-        },
-        {
-            "id": 2,
-            "titulo": "Texto Teste1",
-            "texto": "Texto Teste2",
-            "imagem": "https://i.imgur.com/pfh1IaPb.jpg"
-        },
-        {
-            "id": 3,
-            "titulo": "Texto Teste2",
-            "texto": "Texto Teste2",
-            "imagem": "https://i.imgur.com/pDfpjftb.jpg"
-        },
-        {
-            "id": 4,
-            "titulo": "Texto Teste3",
-            "texto": "Texto Teste3",
-            "imagem": "https://i.imgur.com/Sh6ep41b.jpg"
-        }
-    ]
+  "Postagem": [
+    {
+      "id": 1,
+      "titulo": "Texto Teste",
+      "texto": "Texto Teste",
+      "imagem": "https://i.imgur.com/1fiyedob.jpg?2"
+    },
+    {
+      "id": 2,
+      "titulo": "Texto Teste1",
+      "texto": "Texto Teste2",
+      "imagem": "https://i.imgur.com/pfh1IaPb.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Texto Teste2",
+      "texto": "Texto Teste2",
+      "imagem": "https://i.imgur.com/pDfpjftb.jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "Texto Teste3",
+      "texto": "Texto Teste3",
+      "imagem": "https://i.imgur.com/Sh6ep41b.jpg"
+    },
+    {
+      "titulo": "Testando o POST",
+      "texto": "Segura Papai",
+      "id": 5
+    },
+    {
+      "titulo": "Testando a captura de imagem de perfil do POST",
+      "texto": "SAAALVEEEEE",
+      "id": 6
+    },
+    {
+      "titulo": "Ultimo teste",
+      "texto": "Já deu por hj",
+      "id": 7
+    }
+  ]
 }
