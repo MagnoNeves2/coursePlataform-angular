@@ -11,11 +11,19 @@ export class PostagemService {
 
   constructor(private http: HttpClient) { }
 
-  getAllPostagens(){
+  getAllPostagens() {
     return this.http.get('http://localhost:3001/Postagem');
   }
 
   postpostagem(postagem: Postagem) {
     return this.http.post('http://localhost:3001/Postagem', postagem);
+  }
+
+  putPostagem(postagem: Postagem) {
+    return this.http.put('http://localhost:3001/Postagem', postagem);
+  }
+
+  getByIdPostagem(id: number) {
+    return this.http.get(`http://localhost:3001/Postagem/${id}`)
   }
 }
