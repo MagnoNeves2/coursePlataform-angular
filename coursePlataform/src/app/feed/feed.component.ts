@@ -13,11 +13,24 @@ export class FeedComponent implements OnInit {
   postagem: Postagem = new Postagem
   key = 'id';
   reverse = true;
+  alerta: boolean = false
 
   constructor(private postagemService: PostagemService) { }
 
   ngOnInit() {
+
     this.findAllPostagens();
+
+    let item: string = localStorage.getItem('delOk')
+    if (item == 'true') {
+      this.alerta = true
+      localStorage.clear()
+
+      setTimeout(() => {
+        location.assign('/feed')
+      }, 3000)
+
+    }
   }
 
   findAllPostagens() {
@@ -27,7 +40,7 @@ export class FeedComponent implements OnInit {
   }
 
   publicar() {
-    this.postagemService.postpostagem(this.postagem).subscribe((resp: Postagem)=> {
+    this.postagemService.postpostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       location.assign('/feed');
     })

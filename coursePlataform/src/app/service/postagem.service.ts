@@ -26,4 +26,8 @@ export class PostagemService {
   getByIdPostagem(id: number) {
     return this.http.get(`http://localhost:3001/Postagem/${id}`)
   }
+
+  deletePostagem(id: number) {
+    return this.http.delete(`http://localhost:3001/Postagem/${id}`)
+  }
 }

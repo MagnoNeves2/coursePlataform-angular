@@ -1,12 +1,6 @@
 {
   "Postagem": [
     {
-      "id": 1,
-      "titulo": "Texto Teste",
-      "texto": "Texto Teste",
-      "imagem": "https://i.imgur.com/1fiyedob.jpg?2"
-    },
-    {
       "id": 2,
       "titulo": "Texto Teste1",
       "texto": "Texto Teste2",
@@ -19,15 +13,13 @@
       "imagem": "https://i.imgur.com/pDfpjftb.jpg"
     },
     {
-      "id": 4,
-      "titulo": "Texto Teste3",
-      "texto": "Texto Teste3",
-      "imagem": "https://i.imgur.com/Sh6ep41b.jpg"
+      "id": 4
     },
     {
-      "titulo": "Testando o POST",
-      "texto": "Segura Papai",
-      "id": 5
+      "id": 5,
+      "titulo": "Texto Teste4",
+      "texto": "Texto Teste4",
+      "imagem": "https://i.imgur.com/Sh6ep41b.jpg"
     },
     {
       "titulo": "Testando a captura de imagem de perfil do POST",

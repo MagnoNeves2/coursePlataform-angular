@@ -14,7 +14,7 @@ export class EditarComponent implements OnInit {
 
   constructor(private postagemService: PostagemService, private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     let id = this.route.snapshot.params['id']
     this.findById(id)
   }

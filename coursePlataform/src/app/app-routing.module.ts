@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
 import { FeedComponent } from './feed/feed.component';
 import { EditarComponent } from './editar/editar.component';
+import { DeletarComponent } from './deletar/deletar.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'feed', component: FeedComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'editar/:id', component: EditarComponent },
+  { path: 'deletar/:id', component: DeletarComponent }
 ];
 
 @NgModule({

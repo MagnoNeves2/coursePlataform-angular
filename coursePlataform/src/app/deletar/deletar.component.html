@@ -1,0 +1,71 @@
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+
+        <div class="col-4">
+
+            <div class="card border-0" style="width: 18rem;">
+                <div class="d-flex justify-content-center">
+                    <img class="card-img-top rounded-circle w-75" src="https://i.imgur.com/1fiyedob.jpg?2"
+                        alt="Imagem do Perfil do Usuário">
+                </div>
+
+                <div class="card-body">
+                    <h5 class="card-title text-center">Magno de Oliveira Neves</h5>
+                    <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer
+                        preencher o
+                        conteúdo do card.</p>
+                    <a href="https://www.linkedin.com/in/magnoneves/"
+                        class="btn btn-outline-info d-flex justify-content-center mb-3" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/MagnoNeves2" class="btn btn-outline-dark d-flex justify-content-center"
+                        target="_blank">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-8">
+
+            <div>
+                <h3 class="text-center mb-4 text-monospace ">Deletar Postagem</h3>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header d-flex">
+
+                    <div class="justify-content-start">
+                        <img class="rounded-circle" src="{{ postagem.imagem }}" alt="Foto do perfil" width="30px">
+                    </div>
+
+                    <h5 class="card-title ml-3">{{ postagem.titulo }}</h5>
+
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">{{ postagem.texto }}</p>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="text-center text-monospace mb-5">Tem certeza que deseja apagar essa postagem?</h5>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+
+                        <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
+                        <button class="btn btn-outline-danger" (click)="btnNao()">Não</button>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
