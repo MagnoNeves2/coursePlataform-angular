@@ -2,3 +2,11 @@
     letter-spacing: .2rem;
     font-size: 16pt;
  }
+
+ #navegacao{
+    background: rgba(255, 122, 0, 0.7);
+ }
+
+ li > a {
+    color: white;
+ }
