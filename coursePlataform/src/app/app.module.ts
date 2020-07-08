@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
 import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DeletarComponent } from './deletar/deletar.component';
     FooterComponent,
     FeedComponent,
     EditarComponent,
-    DeletarComponent
+    DeletarComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

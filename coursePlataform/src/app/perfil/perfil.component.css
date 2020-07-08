@@ -1,0 +1,10 @@
+.botao {
+    background: #FFA14C;
+    color: white;
+}
+
+.botao:hover {
+    background: #EC629E;
+    transition: 500ms;
+    color: white;
+}
