@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row my-5">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
 
             <div class="card border-0" style="width: 18rem;">
                 <div class="d-flex justify-content-center">
@@ -20,6 +20,124 @@
                     <input type="text" class="form-control mb-3 w-100" placeholder="Pesquisar postagem">
                     <button class="btn botao w-100" type="button" data-toggle="tooltip" data-placement="bottom"
                         title="Para pesquisar postagens que citem cursos, utilize @ e informe o nome do curso">Pesquisar</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+
+            <nav class="d-flex justify-content-center">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-posts-tab" data-toggle="tab" href="#nav-posts"
+                        role="tab" aria-controls="nav-posts" aria-selected="true">Minhas publicações</a>
+                    <a class="nav-item nav-link" id="nav-feedback-tab" data-toggle="tab" href="#nav-feedback" role="tab"
+                        aria-controls="nav-feedback" aria-selected="false">Feedback</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                        aria-controls="nav-profile" aria-selected="false">Alterar perfil</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-posts" role="tabpanel" aria-labelledby="nav-posts-tab">
+                    <div class="my-5">
+                        <div class="d-flex justify-content-center mb-2">
+                            <div class="publicacao">
+                                <div class="d-flex align-items-center">
+                                    <h6>Nome do usuario -</h6>
+                                    <p class="data">Data da postagem às
+                                        tais horas </p>
+                                </div>
+                                <p>Texto da postagem</p>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-end">
+                                        <button class="btn btn-outline-primary mx-3">Editar</button>
+                                        <button class="btn btn-outline-secondary">Excluir</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="linha"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-feedback" role="tabpanel" aria-labelledby="nav-feedback-tab">
+                    <div class="app my-5">
+                        <h1 class="text-center">Que tal dar uma avaliada na plataforma?</h1>
+                        <p class="text-center">Nos dê um feedback com a sua opinião</p>
+
+                        <div class="d-flex justify-content-center">
+                            <div class="item">
+                                <label for="0">
+                                    <input class="radio" type="radio" name="feedback" id="0" value="0">
+                                    <span>🤬</span>
+                                </label>
+                            </div>
+
+                            <div class="item">
+                                <label for="1">
+                                    <input class="radio" type="radio" name="feedback" id="1" value="1">
+                                    <span>🙁</span>
+                                </label>
+                            </div>
+
+                            <div class="item">
+                                <label for="2">
+                                    <input class="radio" type="radio" name="feedback" id="2" value="2">
+                                    <span>😶</span>
+                                </label>
+                            </div>
+
+                            <div class="item">
+                                <label for="3">
+                                    <input class="radio" type="radio" name="feedback" id="3" value="3">
+                                    <span>😁</span>
+                                </label>
+                            </div>
+
+                            <div class="item">
+                                <label for="4">
+                                    <input class="radio" type="radio" name="feedback" id="4" value="4">
+                                    <span>😍</span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./assets/feedback.gif" alt="GIF ilustrativo em que está escrito feedback"
+                            class="img-fluid">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                    <div class="d-flex justify-content-center my-5">
+
+                        <div class="py-5 px-5" id="alteracao">
+                            <div class="form-group">
+                                <label for="nome">Nome*</label>
+                                <input type="text" class="form-control" id="nome" aria-describedby="nome" required=""
+                                    placeholder="Informe o seu nome.">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email*</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                    required="" placeholder="Informe o seu email.">
+                            </div>
+                            <div class="form-group">
+                                <label for="senha">Senha*</label>
+                                <input type="password" class="form-control" id="senha" required=""
+                                    placeholder="Informe a sua senha.">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmaSenha">Confirmar Senha*</label>
+                                <input type="password" class="form-control" id="confirmaSenha" required=""
+                                    placeholder="Confirme a sua senha.">
+                            </div>
+                            <button type="button" class="btn botao1 mt-3">Alterar</button>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
 

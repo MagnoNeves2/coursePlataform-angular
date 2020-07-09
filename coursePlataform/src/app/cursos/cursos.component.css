@@ -1,21 +1,15 @@
-#imagem {
-    background-image: url('/assets/retangulo1.png');
-    height: 1080px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-h1, h2 {
-    font-family: Righteous, Roboto, sans-serif;
+li > a {
+    color: black;
 }
 
-#img-home{
-    margin-top: 130px;
-}
-
-a, p {
-    font-family: Ubuntu, Roboto, sans-serif;
+li:hover {
+    background: #EC629E;
+    transition: 500ms;
 }
 
 .botao {
@@ -29,7 +23,7 @@ a, p {
     color: white;
 }
 
-.card{
+.box-card{
     padding: 10px;
     transition: box-shadow 0.2s,
                 transform 0.2s,
@@ -40,9 +34,14 @@ a, p {
     box-shadow: 5px 5px 24px -7px rgba(0, 0, 0, 0.44);
 }
 
-.card:hover{
+.box-card:hover{
     z-index: 1;
     box-shadow: 0 8px 50px rgba(#000, 0.2);
     transform: scale(1.05);
     transition: box-shadow 5px 5px 24px -7px rgba(0, 0, 0, 0.44);
+}
+
+.badge {
+    background: #FFA14C;
+    color: white;
 }

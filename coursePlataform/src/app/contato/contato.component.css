@@ -1,8 +1,29 @@
-.imagem {
-    display: block;
+#contato {
+    width: 575px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    margin: 10px 0 0 10px;
 }
 
-.imagem > img{
-    width: 450px;
-    height: 450px;
+#contato > div > input {
+    border: 0;
+    border-bottom:1px solid #555;  
+    background:transparent;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size:16px;
+    color:black;
+}
+
+.botao {
+    background: #FFA14C;
+    color: white;
+}
+
+.botao:hover {
+    background: #EC629E;
+    transition: 500ms;
+    color: white;
 }

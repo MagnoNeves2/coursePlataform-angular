@@ -8,3 +8,90 @@
     transition: 500ms;
     color: white;
 }
+
+.botao1 {
+    background: #EC629E;
+    color: white;
+}
+
+.botao1:hover {
+    background: #FFA14C;
+    transition: 500ms;
+    color: white;
+}
+
+.publicacao{
+    width: 575px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    margin: 10px 0 0 10px;
+}
+
+.linha {
+    width: 1px;
+    border-left:1px solid #EC629E;
+    min-height: 100px;
+}
+
+.data{
+    font-size:12px;
+    padding-top: 11px;
+    margin-left: 4px;
+}
+
+#foto {
+    width: 150px;
+    height: 150px;
+}
+
+/* Teste de emoji para feedback */
+
+.app {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+  
+  .item {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+  .radio {
+    display: none;
+}
+  .radio ~ span {
+    font-size: 3rem;
+    filter: grayscale(100);
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+  .radio:checked ~ span {
+    filter: grayscale(0);
+    font-size: 4rem;
+}
+
+#alteracao {
+    width: 575px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    margin: 10px 0 0 10px;
+}
+
+#alteracao > div > input {
+    border: 0;
+    border-bottom:1px solid #555;  
+    background:transparent;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size:16px;
+    color:black;
+}

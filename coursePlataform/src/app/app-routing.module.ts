@@ -6,11 +6,13 @@ import { FeedComponent } from './feed/feed.component';
 import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { CursosComponent } from './cursos/cursos.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'cursos', component: CursosComponent },
   { path: 'feed', component: FeedComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'contato', component: ContatoComponent },
