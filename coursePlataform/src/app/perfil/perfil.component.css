@@ -95,3 +95,11 @@
     font-size:16px;
     color:black;
 }
+
+#dropdown > a {
+color: #ffffff;
+}
+
+#dropdown > a:hover {
+    color: #000000;
+    }

@@ -16,6 +16,8 @@ import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { LoginComponent } from './login/login.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { CursosComponent } from './cursos/cursos.component';
     EditarComponent,
     DeletarComponent,
     PerfilComponent,
-    CursosComponent
+    CursosComponent,
+    LoginComponent,
+    CadastrarComponent
   ],
   imports: [
     BrowserModule,

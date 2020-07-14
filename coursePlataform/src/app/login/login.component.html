@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row my-5">
+
+        <!-- Arrumar as cores da imagem e retirar o fundo -->
+        <div class="col-md-7 d-flex justify-content-center">
+            <img src="./assets/login.jpg" class="img-fluid" alt="Imagem ilustrativa que representa uma área de login"
+                width="600px" height="600px">
+        </div>
+
+        <div class="col-md-5 d-flex justify-content-center my-5">
+
+            <div class="py-5 px-5" id="autenticar">
+                <div class="form-group">
+                    <label for="nome">Nome*</label>
+                    <input type="text" class="form-control" id="nome" aria-describedby="nome" required=""
+                        placeholder="Informe o seu nome.">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required=""
+                        placeholder="Informe o seu email.">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha*</label>
+                    <input type="password" class="form-control" id="senha" required=""
+                        placeholder="Informe a sua senha.">
+                </div>
+                <div class="form-group">
+                    <label for="confirmaSenha">Confirmar Senha*</label>
+                    <input type="password" class="form-control" id="confirmaSenha" required=""
+                        placeholder="Confirme a sua senha.">
+                </div>
+                <button type="button" class="btn botao1 btn-block mt-4 mb-3">Entrar</button>
+
+                <p class="text-center text-muted">Caso ainda não tenha uma conta em nossa plataforma, considere <a
+                        routerLink="/cadastrar">cadastrar-se</a>.</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>

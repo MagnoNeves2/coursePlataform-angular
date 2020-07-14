@@ -1,49 +1,49 @@
-<div class="container-fluid w-100 d-flex justify-content-center" id="navegacao">
+<div class="container-fluid w-100 " id="navegacao">
 
-  <nav class="navbar navbar-expand-lg">
+  <div class="d-flex justify-content-around">
 
+    <a class="navbar-brand" href="#">Logo</a>
 
-    <!--Botão para resposividade-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!--Botão para resposividade-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--/Botão para resposividade-->
 
-    <!--/Botão para resposividade-->
+      <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
 
-    <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
+        <ul class="navbar-nav ">
+          <li class="nav-item ">
+            <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/inicio'>
+              Início<span class="sr-only">(página atual)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/cursos'>Cursos</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/feed'>Feed</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/perfil'>Perfil</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold"
+              routerLink='/contato'>Contato</a>
+          </li>
+        </ul>
 
-      <ul class="navbar-nav ">
+      </div>
 
-        <li class="nav-item ">
-          <a class="nav-link texto p-3 border-right text-uppercase text-monospace font-weight-bold" routerLink='/home'>
-            Home<span class="sr-only">(página atual)</span></a>
-        </li>
+    </nav>
 
-        <li class="nav-item ">
-          <a class="nav-link texto p-3 border-right text-uppercase text-monospace font-weight-bold"
-            routerLink='/cursos'>Cursos</a>
-        </li>
-
-        <li class="nav-item ">
-          <a class="nav-link texto p-3 border-right text-uppercase text-monospace font-weight-bold"
-            routerLink='/feed'>Feed</a>
-        </li>
-
-        <li class="nav-item ">
-          <a class="nav-link texto p-3 border-right text-uppercase text-monospace font-weight-bold"
-            routerLink='/perfil'>Perfil</a>
-        </li>
-
-        <li class="nav-item ">
-          <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/contato'>Contato</a>
-        </li>
-
-      </ul>
-
-
-
+    <div class="d-flex justify-content-center flex-column align-items-center" id="entrar">
+      <a class="btn outline texto p-3 text-uppercase text-monospace font-weight-bold rounded-pill"
+        routerLink="/entrar">Entrar</a>
     </div>
-  </nav>
+
+  </div>
+
 </div>

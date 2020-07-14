@@ -46,3 +46,9 @@ a, p {
     transform: scale(1.05);
     transition: box-shadow 5px 5px 24px -7px rgba(0, 0, 0, 0.44);
 }
+
+@media(max-width: 800px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}

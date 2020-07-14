@@ -7,6 +7,39 @@
     background: rgba(255, 122, 0, 0.7);
  }
 
- li > a {
-    color: white;
+ a {
+    color: #ffffff;
+ }
+
+ #dropdown {
+   background: transparent;
+   border: transparent;
+ }
+
+ #dropdown > a {
+  color: #000000;
+}
+
+ #dropdown > a:hover {
+   background: #EC629E;
+   color: #ffffff;
+ }
+
+ #login {
+   background: #EC629E;
+ }
+
+ #entrar {
+   width: auto;
+   height: auto;
+ }
+
+ .outline {
+   border-radius: 50rem;
+   border-color: #EC629E;
+ }
+
+ .outline:hover {
+   background: #EC629E;
+   color: #ffffff;
  }
