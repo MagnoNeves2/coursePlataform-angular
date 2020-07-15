@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <div>
+            <div *ngFor="let postagem of listaPostagens | orderBy : key : reverse">
                 <div class="d-flex justify-content-center mb-2">
                     <div class="d-flex justify-content-center flex-column align-items-center" id="foto">
                         <img src="https://i.imgur.com/1fiyedob.jpg?2" class="rounded-circle w-75" alt="Foto do usuário">
@@ -39,14 +39,16 @@
                     <div class="publicacao">
                         <div class="d-flex align-items-center">
                             <h6>Nome do usuario -</h6>
-                            <p class="data">Data da postagem às
-                                tais horas </p>
+                            <p class="data text-muted">{{postagem.data | date: 'dd/MM/yyyy'}} às
+                                {{postagem.data | date: 'HH:mm'}}</p>
                         </div>
-                        <p>Texto da postagem</p>
+                        <p>{{postagem.texto}}</p>
                         <div class="row">
                             <div class="col-md-12 d-flex justify-content-end">
-                                <button class="btn btn-outline-primary mx-3">Editar</button>
-                                <button class="btn btn-outline-secondary">Excluir</button>
+                                <button class="btn btn-outline-primary mx-3"
+                                    [routerLink]="['/editar', postagem.id]">Editar</button>
+                                <button class="btn btn-outline-secondary"
+                                    [routerLink]="['/deletar', postagem.id]">Excluir</button>
                             </div>
                         </div>
                     </div>

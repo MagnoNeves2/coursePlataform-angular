@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Postagem } from '../model/Postagem';
+import { PostagemService } from '../service/postagem.service';
 
 @Component({
   selector: 'app-perfil',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor() { }
+  listaPostagens: Postagem[];
+  postagem: Postagem = new Postagem();
+  texto: string;
 
-  ngOnInit(): void {
+  constructor(private postagemService: PostagemService) { }
+
+  ngOnInit() {
+    this.findAllPostagens();
+  }
+
+  findAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp;
+    })
+  }
+
+  pesquisar() {
+    this.postagemService.getByTexto(this.texto).subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp;
+    })
   }
 
 }

@@ -12,22 +12,26 @@ export class PostagemService {
   constructor(private http: HttpClient) { }
 
   getAllPostagens() {
-    return this.http.get('http://localhost:3001/Postagem');
-  }
-
-  postpostagem(postagem: Postagem) {
-    return this.http.post('http://localhost:3001/Postagem', postagem);
-  }
-
-  putPostagem(postagem: Postagem) {
-    return this.http.put('http://localhost:3001/Postagem', postagem);
+    return this.http.get('http://localhost:8080/postagens');
   }
 
   getByIdPostagem(id: number) {
-    return this.http.get(`http://localhost:3001/Postagem/${id}`)
+    return this.http.get(`http://localhost:8080/postagens/${id}`)
+  }
+
+  getByTexto(texto: string) {
+    return this.http.get(`http://localhost:8080/postagens/pesquisa/${texto}`)
+  }
+
+  postpostagem(postagem: Postagem) {
+    return this.http.post('http://localhost:8080/postagens', postagem);
+  }
+
+  putPostagem(postagem: Postagem) {
+    return this.http.put('http://localhost:8080/postagens', postagem);
   }
 
   deletePostagem(id: number) {
-    return this.http.delete(`http://localhost:3001/Postagem/${id}`)
+    return this.http.delete(`http://localhost:8080/postagens/${id}`)
   }
 }
