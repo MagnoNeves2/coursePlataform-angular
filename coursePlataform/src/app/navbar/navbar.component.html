@@ -39,9 +39,13 @@
 
     </nav>
 
-    <div class="d-flex justify-content-center flex-column align-items-center" id="entrar">
-      <a class="btn outline texto p-3 text-uppercase text-monospace font-weight-bold rounded-pill"
-        routerLink="/entrar">Entrar</a>
+    <div class="d-flex justify-content-center flex-column align-items-center dropdown" id="entrar">
+      <a class="btn outline texto p-3 text-uppercase text-monospace font-weight-bold rounded-pill dropdown-toggle"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acessar</a>
+      <div class="dropdown-menu bg-dark" id="dropdown">
+        <a class="dropdown-item rounded-pill" routerLink="/entrar">Entrar</a>
+        <a class="dropdown-item rounded-pill" routerLink="/cadastrar">Cadastrar-se</a>
+      </div>
     </div>
 
   </div>

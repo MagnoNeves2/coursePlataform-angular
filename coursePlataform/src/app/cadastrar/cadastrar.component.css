@@ -1,0 +1,33 @@
+#cadastrar {
+    width: 575px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    margin: 10px 0 0 10px;
+}
+
+#cadastrar > div > input {
+    border: 0;
+    border-bottom:1px solid #555;  
+    background:transparent;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size:16px;
+    color:black;
+}
+
+#cadastrar > p {
+    font-size: 13px;
+}
+
+.botao1 {
+    background: #EC629E;
+    color: white;
+}
+
+.botao1:hover {
+    background: #FFA14C;
+    transition: 500ms;
+    color: white;
+}

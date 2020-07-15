@@ -17,13 +17,13 @@
     color:black;
 }
 
-.botao {
-    background: #FFA14C;
+.botao1 {
+    background: #EC629E;
     color: white;
 }
 
-.botao:hover {
-    background: #EC629E;
+.botao1:hover {
+    background: #FFA14C;
     transition: 500ms;
     color: white;
 }
