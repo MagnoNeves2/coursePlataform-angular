@@ -1,0 +1,37 @@
+p {
+    font-family: Ubuntu, Roboto, sans-serif;
+}
+
+.botao {
+    background: #FFA14C;
+    color: white;
+}
+
+.botao:hover {
+    background: #EC629E;
+    transition: 500ms;
+    color: white;
+}
+
+#dropdown > a {
+    color: #ffffff;
+    }
+    
+#dropdown > a:hover {
+    color: #000000;
+}
+
+.publicacao{
+    width: 575px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    margin: 10px 0 0 10px;
+}
+
+.data{
+    font-size:12px;
+    padding-top: 11px;
+    margin-left: 4px;
+}

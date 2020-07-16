@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditarComponent implements OnInit {
 
-  postagem: Postagem = new Postagem;
+  postagem: Postagem = new Postagem();
 
   constructor(private postagemService: PostagemService, private route: ActivatedRoute, private router: Router) { }
 
@@ -26,13 +26,19 @@ export class EditarComponent implements OnInit {
     })
   }
 
-  salvar() {
+  btnSim() {
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       this.router.navigate(['/feed'])
       location.assign('/feed')
     })
   }
+
+  btnNao() {
+    this.router.navigate(['/feed'])
+  }
+
+
 
 
 }

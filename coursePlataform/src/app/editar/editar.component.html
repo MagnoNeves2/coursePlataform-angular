@@ -1,8 +1,6 @@
 <div class="container">
-
-    <div class="row mt-5 mb-5">
-
-        <div class="col-4">
+    <div class="row my-5">
+        <div class="col-md-4 mb-3">
 
             <div class="card border-0" style="width: 18rem;">
                 <div class="d-flex justify-content-center">
@@ -15,40 +13,43 @@
                     <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer
                         preencher o
                         conteúdo do card.</p>
-                    <a href="https://www.linkedin.com/in/magnoneves/"
-                        class="btn btn-outline-info d-flex justify-content-center mb-3" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/MagnoNeves2" class="btn btn-outline-dark d-flex justify-content-center"
-                        target="_blank">GitHub</a>
+
+                    <button class="btn botao w-100 mt-2" type="button" routerLink="/feed">Feed</button>
+
+                    <div class="btn-group dropdown w-100 mt-3">
+                        <button type="button" class="btn botao dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Administração
+                        </button>
+                        <div class="dropdown-menu bg-dark" id="dropdown">
+                            <a class="dropdown-item rounded-pill" href="#">Lista de Usuários</a>
+                            <a class="dropdown-item rounded-pill" href="#">Controle</a>
+                            <a class="dropdown-item rounded-pill" href="#">Cadastrar cursos</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
+        <div class="col-md-8 d-flex justify-content-center flex-column align-items-center">
 
-        <div class="col-8">
+            <h1>Edição de publicação</h1>
 
-            <div>
-                <h3 class="text-center mb-4 text-monospace ">Edição de Postagem</h3>
-
-                <div class="form-group">
-                    <label for="titulo" class="text-monospace">Título:</label>
-                    <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite seu título"
-                        [(ngModel)]="postagem.titulo">
+            <div class="my-5">
+                <div class="d-flex justify-content-center mb-3">
+                    <div class="form-group">
+                        <textarea name="texto" id="texto" cols="30" rows="5" class="form-control"
+                            placeholder="Não seja timidx, e faça uma publicação!"
+                            [(ngModel)]="postagem.texto"></textarea>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="texto" class="text-monospace">Texto:</label>
-                    <textarea name="texto" id="texto" cols="30" rows="4" class="form-control"
-                        placeholder="Digite seu texto" [(ngModel)]="postagem.texto"></textarea>
+                <p class="text-center">Tem certeza que deseja alterar a publicação?</p>
+                <div class="col-md-12 d-flex justify-content-center mt-2">
+                    <button class="btn btn-outline-success mx-3" (click)="btnSim()">Sim</button>
+                    <button class="btn btn-outline-danger" (click)="btnNao()">Não</button>
                 </div>
-
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
-                </div>
-
             </div>
 
         </div>
-
     </div>
-
 </div>
