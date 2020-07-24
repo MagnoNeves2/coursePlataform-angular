@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
@@ -9,6 +9,11 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { ListausuariosComponent } from './adm/listausuarios/listausuarios.component';
+import { CursoComponent } from './adm/curso/curso.component';
+import { EditarCursoComponent } from './editar-curso/editar-curso.component';
+import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
+
 
 
 const routes: Routes = [
@@ -20,8 +25,12 @@ const routes: Routes = [
   { path: 'contato', component: ContatoComponent },
   { path: 'entrar', component: LoginComponent },
   { path: 'cadastrar', component: CadastrarComponent },
+  { path: 'adm-usuarios', component: ListausuariosComponent },
+  { path: 'adm-cursos', component: CursoComponent },
   { path: 'editar/:id', component: EditarComponent },
-  { path: 'deletar/:id', component: DeletarComponent }
+  { path: 'deletar/:id', component: DeletarComponent },
+  { path: 'editar-curso/:id', component: EditarCursoComponent },
+  { path: 'excluir-curso', component: DeletarCursoComponent }
 ];
 
 @NgModule({

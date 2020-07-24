@@ -28,18 +28,27 @@
             </div>
         </div>
 
-        <div class="col-md-3 d-flex justify-content-center">
+        <div class="col-md-3 d-flex justify-content-center" *ngFor="let curso of listaCursos">
             <div class="card box-card" style="width: 18rem;">
                 <div class="d-flex justify-content-center flex-column align-items-center">
-                    <img src="./assets/design.jpg" class="card-img-top rounded-circle w-100"
+                    <img src="{{curso.imagem}}" class="card-img-top rounded-circle w-100"
                         alt="Imagem ilustrativa para exemplificar o curso" width="250" height="250">
                 </div>
                 <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's content.</p>
-                    <a href="#" class="btn botao rounded-pill d-flex justify-content-center">Visitar</a>
+                    <h5 class="card-title">{{curso.nome}}</h5>
+                    <p class="card-text">{{curso.descricao}}</p>
+                </div>
+                <a href="{{curso.link}}" target="_blank"
+                    class="btn botao rounded-pill d-flex justify-content-center mb-2">Visitar</a>
+                <div class="btn-group dropup">
+                    <button type="button" class="btn botao1 rounded-pill dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu bg-dark" id="dropdown">
+                        <a class="dropdown-item rounded-pill" [routerLink]="['/editar-curso', curso.id]">Editar</a>
+                        <a class="dropdown-item rounded-pill" href="#">Excluir</a>
+                    </div>
                 </div>
             </div>
         </div>

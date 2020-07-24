@@ -25,8 +25,9 @@
                         placeholder="Confirme a sua senha." (input)='confirmaSenha($event)' value="{{confSenha}}">
                 </div>
                 <button type="button" class="btn botao1 btn-block mt-4 mb-3" (click)="cadastrar()">Cadastrar</button>
-
-                <p class="text-center text-muted">Caso já tenha uma conta em nossa plataforma, realize o <a
+                <div class="alert-danger text-center p-2" style="visibility: hidden;" id="alerta">
+                </div>
+                <p class="text-center text-muted mt-2">Caso já tenha uma conta em nossa plataforma, realize o <a
                         routerLink="/entrar">login</a>.</p>
             </div>
 

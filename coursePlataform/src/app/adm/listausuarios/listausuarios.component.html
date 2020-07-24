@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 my-5">
+
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" class="text-center">Teste</th>
+                        <th scope="col" class="text-center">Nome</th>
+                        <th scope="col" class="text-center">Email</th>
+                        <th scope="col" class="text-center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let usuario of listaUsuarios">
+                    <tr>
+                        <th scope="row" class="text-center"> {{ usuario.id }} </th>
+                        <td class="text-center"> {{ usuario.nome }} </td>
+                        <td class="text-center"> {{ usuario.email }} </td>
+                        <td class="text-center">
+                            <button class="btn btn-outline-primary mx-4">Alterar</button>
+                            <button class="btn btn-outline-secondary">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="container">
+    <h1 class="text-center my-5">Área de cadastro de cursos</h1>
+    <div class="row mb-5">
+        <div class="col-md-6 d-flex justify-content-center">
+
+            <div class="card box-card" style="width: 18rem;">
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <img src="{{imagem}}" class="card-img-top rounded-circle w-100"
+                        alt="Imagem ilustrativa para exemplificar o curso" width="250" height="250">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{nome}}</h5>
+                    <p class="card-text">{{descricao}}</p>
+                    <a href="#" class="btn botao rounded-pill d-flex justify-content-center">Visitar</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6 d-flex justify-content-center flex-column align-items-center">
+
+            <div class="py-5 px-5" id="cadastrarCurso">
+                <div class="form-group">
+                    <label for="nome">Nome do Curso*</label>
+                    <input type="text" class="form-control" id="nome" aria-describedby="nome" required=""
+                        placeholder="Informe o nome do curso." [(ngModel)]="curso.nome" (input)='nomeCurso($event)'
+                        value="{{nome}}">
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição*</label>
+                    <input type="text" class="form-control" id="descricao" aria-describedby="descricao" required=""
+                        placeholder="Informe o resumo do curso." [(ngModel)]="curso.descricao"
+                        (input)='descricaoCurso($event)' value="{{descricao}}">
+                </div>
+                <div class="form-group">
+                    <label for="genero">Genêro*</label>
+                    <input type="text" class="form-control" id="genero" aria-describedby="genero" required=""
+                        placeholder="Informe o resumo do curso." [(ngModel)]="curso.genero"
+                        (input)='generoCurso($event)' value="{{genero}}">
+                </div>
+                <div class="form-group">
+                    <label for="imagem">Imagem*</label>
+                    <input type="text" class="form-control" id="imagem" aria-describedby="imagem" required=""
+                        placeholder="Forneça uma imagem para o curso." [(ngModel)]="curso.imagem"
+                        (input)='imagemCurso($event)' value="{{imagem}}">
+                </div>
+                <div class="form-group">
+                    <label for="link">Link*</label>
+                    <input type="text" class="form-control" id="link" aria-describedby="link" required=""
+                        placeholder="Forneça uma link para o curso." [(ngModel)]="curso.link"
+                        (input)='linkCurso($event)' value="{{link}}">
+                </div>
+                <button type="button" class="btn botao1 btn-block mt-4 mb-3" (click)="cadastrar()">Cadastrar
+                    curso</button>
+                <div class="alert-success text-center p-2 mt-3" style="visibility: hidden;" id="alerta">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

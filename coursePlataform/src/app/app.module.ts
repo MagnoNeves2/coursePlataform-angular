@@ -18,6 +18,10 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { CursoComponent } from './adm/curso/curso.component';
+import { ListausuariosComponent } from './adm/listausuarios/listausuarios.component';
+import { EditarCursoComponent } from './editar-curso/editar-curso.component';
+import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     PerfilComponent,
     CursosComponent,
     LoginComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    CursoComponent,
+    ListausuariosComponent,
+    EditarCursoComponent,
+    DeletarCursoComponent
   ],
   imports: [
     BrowserModule,

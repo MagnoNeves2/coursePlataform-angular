@@ -12,6 +12,8 @@ export class PerfilComponent implements OnInit {
   listaPostagens: Postagem[];
   postagem: Postagem = new Postagem();
   texto: string;
+  key = 'id';
+  reverse = true;
 
   constructor(private postagemService: PostagemService) { }
 
