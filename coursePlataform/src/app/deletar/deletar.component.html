@@ -22,9 +22,8 @@
                             Administração
                         </button>
                         <div class="dropdown-menu bg-dark" id="dropdown">
-                            <a class="dropdown-item rounded-pill" href="#">Lista de Usuários</a>
-                            <a class="dropdown-item rounded-pill" href="#">Controle</a>
-                            <a class="dropdown-item rounded-pill" href="#">Cadastrar cursos</a>
+                            <a class="dropdown-item rounded-pill" routerLink="/adm-usuarios">Lista de Usuários</a>
+                            <a class="dropdown-item rounded-pill" routerLink="/adm-cursos">Cadastrar cursos</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +45,7 @@
                         <p>{{postagem.texto}}</p>
                     </div>
                 </div>
-                <p class="text-center">Tem certeza que deseja excluir a publicação?</p>
+                <h3 class="text-center">Tem certeza que deseja excluir a publicação?</h3>
                 <div class="col-md-12 d-flex justify-content-center mt-2">
                     <button class="btn btn-outline-success mx-3" (click)="btnSim()">Sim</button>
                     <button class="btn btn-outline-danger" (click)="btnNao()">Não</button>

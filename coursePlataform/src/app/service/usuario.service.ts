@@ -13,6 +13,10 @@ export class UsuarioService {
     return this.http.get('http://localhost:8080/usuarios');
   }
 
+  getByIdUsuario(id: number) {
+    return this.http.get(`http://localhost:8080/usuarios/${id}`)
+  }
+
   postUsuario(usuario: Usuario) {
     return this.http.post('http://localhost:8080/usuarios', usuario);
   }

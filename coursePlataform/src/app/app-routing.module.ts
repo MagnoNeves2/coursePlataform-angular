@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'editar/:id', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
   { path: 'editar-curso/:id', component: EditarCursoComponent },
-  { path: 'excluir-curso', component: DeletarCursoComponent }
+  { path: 'excluir-curso/:id', component: DeletarCursoComponent }
 ];
 
 @NgModule({

@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./deletar.component.css']
 })
 export class DeletarComponent implements OnInit {
-  
+
   postagem: Postagem = new Postagem
   delOk: boolean = false
 
@@ -21,23 +21,23 @@ export class DeletarComponent implements OnInit {
   }
 
   findById(id: number) {
-    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem)=> {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
     }, err => {
       console.log(`Erro: ${err.status}, não conseguimos pegar o ID`)
     })
   }
 
-  btnSim(){
-    this.postagemService.deletePostagem(this.postagem.id).subscribe(()=>{
+  btnSim() {
+    this.postagemService.deletePostagem(this.postagem.id).subscribe(() => {
       this.delOk = true
       this.router.navigate(['/feed'])
       localStorage.setItem('delOk', this.delOk.toString())
     })
   }
 
-  btnNao(){
-    this.router.navigate(['/feed'])
+  btnNao() {
+    this.router.navigate(['/perfil'])
   }
 
 

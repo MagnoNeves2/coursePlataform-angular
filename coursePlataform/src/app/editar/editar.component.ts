@@ -29,13 +29,13 @@ export class EditarComponent implements OnInit {
   btnSim() {
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      this.router.navigate(['/feed'])
-      location.assign('/feed')
+      this.router.navigate(['/perfil'])
+      location.assign('/perfil')
     })
   }
 
   btnNao() {
-    this.router.navigate(['/feed'])
+    this.router.navigate(['/perfil'])
   }
 
 

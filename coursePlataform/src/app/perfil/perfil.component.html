@@ -66,8 +66,10 @@
                                     <p>{{postagem.texto}}</p>
                                     <div class="row">
                                         <div class="col-md-12 d-flex justify-content-end">
-                                            <button class="btn btn-outline-primary mx-3">Editar</button>
-                                            <button class="btn btn-outline-secondary">Excluir</button>
+                                            <button class="btn btn-outline-primary mx-3"
+                                                [routerLink]="['/editar', postagem.id]">Editar</button>
+                                            <button class="btn btn-outline-secondary"
+                                                [routerLink]="['/deletar', postagem.id]">Excluir</button>
                                         </div>
                                     </div>
                                 </div>
