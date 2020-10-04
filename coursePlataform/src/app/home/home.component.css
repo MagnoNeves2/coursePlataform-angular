@@ -52,3 +52,9 @@ a, p {
         font-size: 1.5rem;
     }
 }
+
+@media(max-width: 760px) {
+    #img-home{
+        margin-top: 30px;
+    }
+}

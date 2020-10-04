@@ -22,6 +22,7 @@ import { CursoComponent } from './adm/curso/curso.component';
 import { ListausuariosComponent } from './adm/listausuarios/listausuarios.component';
 import { EditarCursoComponent } from './editar-curso/editar-curso.component';
 import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
+import { ListaPostComponent } from './lista-post/lista-post.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
     CursoComponent,
     ListausuariosComponent,
     EditarCursoComponent,
-    DeletarCursoComponent
+    DeletarCursoComponent,
+    ListaPostComponent
   ],
   imports: [
     BrowserModule,

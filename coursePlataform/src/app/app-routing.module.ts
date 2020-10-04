@@ -13,6 +13,7 @@ import { ListausuariosComponent } from './adm/listausuarios/listausuarios.compon
 import { CursoComponent } from './adm/curso/curso.component';
 import { EditarCursoComponent } from './editar-curso/editar-curso.component';
 import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
+import { ListaPostComponent } from './lista-post/lista-post.component';
 
 
 
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'editar/:id', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
   { path: 'editar-curso/:id', component: EditarCursoComponent },
-  { path: 'excluir-curso/:id', component: DeletarCursoComponent }
+  { path: 'excluir-curso/:id', component: DeletarCursoComponent },
+  { path: 'lista-post', component: ListaPostComponent }
 ];
 
 @NgModule({

@@ -15,6 +15,8 @@ export class EditarComponent implements OnInit {
   constructor(private postagemService: PostagemService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
+    window.scroll(0, 0)
+
     let id = this.route.snapshot.params['id']
     this.findById(id)
   }
@@ -30,15 +32,12 @@ export class EditarComponent implements OnInit {
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       this.router.navigate(['/perfil'])
-      location.assign('/perfil')
     })
   }
 
   btnNao() {
     this.router.navigate(['/perfil'])
   }
-
-
 
 
 }

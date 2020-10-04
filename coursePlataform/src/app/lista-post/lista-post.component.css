@@ -1,38 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
+h6 {
     font-family: Ubuntu, Roboto, sans-serif;
 }
 
 p {
     font-family: Roboto, sans-serif;
-}
-
-textarea{
-    width: 100%;
-    height: 100px;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.botao {
-    background: #FFA14C;
-    color: white;
-}
-
-.botao:hover {
-    background: #EC629E;
-    transition: 500ms;
-    color: white;
-}
-
-.botao1 {
-    background: #EC629E;
-    color: white;
-}
-
-.botao1:hover {
-    background: #FFA14C;
-    transition: 500ms;
-    color: white;
 }
 
 .publicacao{

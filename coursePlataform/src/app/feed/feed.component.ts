@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostagemService } from '../service/postagem.service';
 import { Postagem } from '../model/Postagem';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-feed',
@@ -11,15 +13,13 @@ export class FeedComponent implements OnInit {
 
   listaPostagens: Postagem[]
   postagem: Postagem = new Postagem
-  key = 'id';
-  reverse = true;
   alerta: boolean = false
 
-  constructor(private postagemService: PostagemService) { }
+  constructor(private postagemService: PostagemService, private router: Router, private locationPage: Location) { }
 
   ngOnInit() {
 
-    this.findAllPostagens();
+    window.scroll(0, 0)
 
     let item: string = localStorage.getItem('delOk')
     if (item == 'true') {
@@ -27,23 +27,24 @@ export class FeedComponent implements OnInit {
       localStorage.clear()
 
       setTimeout(() => {
-        location.assign('/feed')
+        this.refresh();
       }, 3000)
 
     }
   }
 
-  findAllPostagens() {
-    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
-      this.listaPostagens = resp
+  refresh() {
+    this.router.navigateByUrl('/lista-post', { skipLocationChange: true }).then(() => {
+      this.router.navigate([this.locationPage.path()])
     })
   }
 
   publicar() {
     this.postagemService.postpostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      location.assign('/feed');
+      this.refresh();
     })
   }
+
 
 }

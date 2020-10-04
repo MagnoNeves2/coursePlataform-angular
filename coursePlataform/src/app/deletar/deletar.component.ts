@@ -16,6 +16,8 @@ export class DeletarComponent implements OnInit {
   constructor(private postagemService: PostagemService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
+    window.scroll(0, 0)
+
     let id: number = this.route.snapshot.params['id']
     this.findById(id)
   }
