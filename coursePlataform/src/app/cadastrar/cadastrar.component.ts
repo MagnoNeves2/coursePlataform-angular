@@ -63,7 +63,7 @@ export class CadastrarComponent implements OnInit {
       else if (senha.length < 6) {
         this.mostrarAlerta("O número minímo de caracteres para senha é 6!")
       }
-      else if (this.confSenha.length < 6 && !(senha === this.confSenha)) {
+      else if (!(senha === this.confSenha)) {
         this.mostrarAlerta("Divergência com a senha fornecida!")
       }
       else {

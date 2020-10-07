@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Curso } from '../model/Curso';
+import { CursoService } from '../service/curso.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  key = 'id';
+  reverse = true;
+  listaCursos: Curso[];
+  curso: Curso = new Curso();
 
-  ngOnInit(): void {
+  constructor(private cursoService: CursoService) { }
+
+  ngOnInit() {
+    this.getAllCursos();
+  }
+
+  getAllCursos() {
+    this.cursoService.getAllCursos().subscribe((resp: Curso[]) => {
+      this.listaCursos = resp;
+    })
   }
 
 }

@@ -5,9 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_curso")
@@ -29,9 +32,9 @@ public class Curso {
 	private String descricao;
 	
 	@NotNull
-	@Size(min = 2, max = 80, message = "O número mínimo de caracteres para o genêro é 2!")
-	@Column(name = "nm_genero", nullable = false, length = 80)
-	private String genero;
+	@ManyToOne
+	@JsonIgnoreProperties("curso")
+	private Genero genero;
 	
 	@NotNull
 	@Column(name = "imagem", nullable = false)
@@ -66,11 +69,11 @@ public class Curso {
 		this.descricao = descricao;
 	}
 
-	public String getGenero() {
+	public Genero getGenero() {
 		return genero;
 	}
 
-	public void setGenero(String genero) {
+	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
 
@@ -89,5 +92,5 @@ public class Curso {
 	public void setLink(String link) {
 		this.link = link;
 	}
-
+	
 }

@@ -20,21 +20,20 @@
         </div>
     </div>
     <div class="d-flex justify-content-center mb-5">
-        <h2 class="text center">🥰 CURSOS MAIS PROCURADOS 🥰</h2>
+        <h2 class="text center">🥰 CURSOS RECENTES 🥰</h2>
     </div>
     <div class="row mb-5">
-        <div class="col-md-4 d-flex justify-content-center">
+        <div class="col-md-3 d-flex justify-content-center" *ngFor="let curso of listaCursos | orderBy : key : reverse">
             <div class="card border-0" style="width: 18rem;">
                 <div class="d-flex justify-content-center flex-column align-items-center">
-                    <img src="./assets/design.jpg" class="card-img-top rounded-circle w-100"
+                    <img src="{{curso.imagem}}" class="card-img-top rounded-circle w-100"
                         alt="Imagem ilustrativa para exemplificar o curso" width="250" height="250">
                 </div>
                 <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn botao rounded-pill d-flex justify-content-center">Visitar</a>
+                    <h5 class="card-title">{{curso.nome}}</h5>
+                    <p class="card-text">{{curso.descricao}}</p>
                 </div>
+                <a href="#" class="btn botao rounded-pill d-flex justify-content-center">Visitar</a>
             </div>
         </div>
     </div>
