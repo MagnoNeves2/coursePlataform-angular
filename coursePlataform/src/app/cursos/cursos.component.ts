@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CursoService } from '../service/curso.service';
 import { Curso } from '../model/Curso';
+import { Genero } from '../model/Genero';
+import { GeneroService } from '../service/genero.service';
 
 @Component({
   selector: 'app-cursos',
@@ -9,18 +11,30 @@ import { Curso } from '../model/Curso';
 })
 export class CursosComponent implements OnInit {
 
-  listaCursos: Curso[];
   curso: Curso = new Curso();
+  listaCursos: Curso[];
 
-  constructor(private cursoservice: CursoService) { }
+  genero: Genero = new Genero();
+  listaGeneros: Genero[];
+
+  constructor(private cursoservice: CursoService, private generoService: GeneroService) { }
 
   ngOnInit() {
+    window.scroll(0, 0)
+
     this.findAllCursos();
+    this.findAllGeneros();
   }
 
   findAllCursos() {
     this.cursoservice.getAllCursos().subscribe((resp: Curso[]) => {
       this.listaCursos = resp;
+    })
+  }
+
+  findAllGeneros() {
+    this.generoService.getAllGeneros().subscribe((resp: Genero[]) => {
+      this.listaGeneros = resp;
     })
   }
 

@@ -31,6 +31,13 @@ public class GeneroController {
 		return ResponseEntity.status(HttpStatus.OK).body(repository.findAll());
 	}
 	
+	@GetMapping("/{id}")
+	public ResponseEntity<Genero> getById(@PathVariable long id) {
+		return repository.findById(id)
+				.map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.notFound().build());
+	}
+	
 	@GetMapping("nome/{nome}")
 	public ResponseEntity<List<Genero>> getByName(@PathVariable String nome) {
 		return ResponseEntity.status(HttpStatus.OK).body(repository.findAllByNomeContainingIgnoreCase(nome));
