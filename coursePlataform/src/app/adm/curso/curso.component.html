@@ -44,21 +44,21 @@
                         (input)='linkCurso($event)' value="{{link}}">
                 </div>
                 <div class="form-group">
-                    <label for="genero">Genêro*</label>
+                    <label for="genero">Gênero*</label>
                     <select class="form-control" id="genero" name="genero" [(ngModel)]="idGenero"
                         (change)="findByIdGenero()">
                         <option *ngFor="let genero of listaGeneros" value={{genero.id}}>{{genero.nome}}</option>
                     </select>
                     <div class="d-flex justify-content-end mt-2">
-                        <small><a data-toggle="modal" data-target="#modalExemplo">Cadastrar nova categoria</a></small>
+                        <small><a data-toggle="modal" data-target="#modalExemplo">Cadastrar novo gênero</a></small>
 
                         <!-- Modal -->
                         <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            aria-labelledby="modalCategoria" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Categorias</h5>
+                                        <h5 class="modal-title" id="modalCategoria">Gêneros</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -87,13 +87,14 @@
                                                         <div class="col">
                                                             <label for="nome-cat">Nome da categoria</label>
                                                             <input type="text" class="form-control" placeholder="Nome"
-                                                                id="nome-cat" required="">
+                                                                id="nome-cat" required="" [(ngModel)]="genero.nome">
                                                         </div>
                                                     </div>
                                                     <div class="d-flex justify-content-center mt-3">
                                                         <button class="btn btn-outline-secondary mr-2"
                                                             data-dismiss="modal">Voltar</button>
-                                                        <button class="btn btn-outline-success ml-2">Salvar</button>
+                                                        <button class="btn btn-outline-success ml-2"
+                                                            (click)="cadastrarGenero()">Salvar</button>
                                                     </div>
                                                 </div>
 
@@ -104,7 +105,7 @@
                                                 <div class="mt-3">
                                                     <div class="form-row">
                                                         <div class="col">
-                                                            <label for="alt-genero">Categoria a ser alterada</label>
+                                                            <label for="alt-genero">Gênero a ser alterado</label>
                                                             <select class="form-control" id="alt-genero"
                                                                 name="alt-genero">
                                                                 <option *ngFor="let genero of listaGeneros"
@@ -154,7 +155,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn botao1 btn-block mt-4 mb-3" (click)="cadastrar()">Cadastrar
+                <button type="button" class="btn botao1 btn-block mt-4 mb-3" (click)="cadastrarCurso()">Cadastrar
                     curso</button>
                 <div class="alert-success text-center p-2 mt-3" style="visibility: hidden;" id="alerta">
                 </div>

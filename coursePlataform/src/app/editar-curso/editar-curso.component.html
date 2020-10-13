@@ -17,12 +17,6 @@
                         (input)='descricaoCurso($event)' value="{{descricao}}">
                 </div>
                 <div class="form-group">
-                    <label for="genero">Genêro*</label>
-                    <input type="text" class="form-control" id="genero" aria-describedby="genero" required=""
-                        placeholder="Informe o resumo do curso." [(ngModel)]="curso.genero"
-                        (input)='generoCurso($event)' value="{{genero}}">
-                </div>
-                <div class="form-group">
                     <label for="imagem">Imagem*</label>
                     <input type="text" class="form-control" id="imagem" aria-describedby="imagem" required=""
                         placeholder="Forneça uma imagem para o curso." [(ngModel)]="curso.imagem"
@@ -33,6 +27,13 @@
                     <input type="text" class="form-control" id="link" aria-describedby="link" required=""
                         placeholder="Forneça uma link para o curso." [(ngModel)]="curso.link"
                         (input)='linkCurso($event)' value="{{link}}">
+                </div>
+                <div class="form-group">
+                    <label for="genero">Genêro*</label>
+                    <select class="form-control" id="genero" name="genero" [(ngModel)]="idGenero"
+                        (change)="findByIdGenero()">
+                        <option *ngFor="let genero of listaGeneros" value={{genero.id}}>{{genero.nome}}</option>
+                    </select>
                 </div>
                 <button type="button" class="btn botao1 btn-block mt-4" (click)="salvar()">Salvar</button>
                 <button type="button" class="btn botao btn-block mt-2 mb-3" (click)="voltar()">Voltar</button>

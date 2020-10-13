@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Curso } from '../model/Curso';
 import { CursoService } from '../service/curso.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { GeneroService } from '../service/genero.service';
+import { Genero } from '../model/Genero';
 
 @Component({
   selector: 'app-editar-curso',
@@ -13,15 +15,19 @@ export class EditarCursoComponent implements OnInit {
   curso: Curso = new Curso();
   nome: string;
   descricao: string;
-  genero: string;
   imagem: string;
   link: string;
 
-  constructor(private cursoService: CursoService, private router: Router, private route: ActivatedRoute) { }
+  genero: Genero = new Genero();
+  listaGeneros: Genero[];
+  idGenero: number;
+
+  constructor(private cursoService: CursoService, private router: Router, private route: ActivatedRoute, private generoService: GeneroService) { }
 
   ngOnInit() {
     let id = this.route.snapshot.params['id']
     this.findById(id);
+    this.findAllGeneros();
   }
 
   nomeCurso(event: any) {
@@ -30,10 +36,6 @@ export class EditarCursoComponent implements OnInit {
 
   descricaoCurso(event: any) {
     this.descricao = event.target.value;
-  }
-
-  generoCurso(event: any) {
-    this.genero = event.target.value;
   }
 
   imagemCurso(event: any) {
@@ -51,6 +53,8 @@ export class EditarCursoComponent implements OnInit {
   }
 
   salvar() {
+    this.genero.id = this.idGenero;
+    this.curso.genero = this.genero;
     this.cursoService.putCurso(this.curso).subscribe((resp: Curso) => {
       this.curso = resp;
       this.router.navigate(['/cursos'])
@@ -59,6 +63,18 @@ export class EditarCursoComponent implements OnInit {
 
   voltar() {
     this.router.navigate(['/cursos'])
+  }
+
+  findAllGeneros() {
+    this.generoService.getAllGeneros().subscribe((resp: Genero[]) => {
+      this.listaGeneros = resp;
+    })
+  }
+
+  findByIdGenero() {
+    this.generoService.getByIdGenero(this.idGenero).subscribe((resp: Genero) => {
+      this.genero = resp;
+    })
   }
 
 }

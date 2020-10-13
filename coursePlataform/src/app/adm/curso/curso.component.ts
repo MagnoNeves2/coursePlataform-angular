@@ -23,8 +23,33 @@ export class CursoComponent implements OnInit {
 
   constructor(private cursoService: CursoService, private generoService: GeneroService) { }
 
+  nomeCurso(event: any) {
+    this.nome = event.target.value;
+  }
+
+  descricaoCurso(event: any) {
+    this.descricao = event.target.value;
+  }
+
+  imagemCurso(event: any) {
+    this.imagem = event.target.value;
+  }
+
+  linkCurso(event: any) {
+    this.link = event.target.value;
+  }
+
   ngOnInit() {
     this.findAllGeneros();
+  }
+
+  cadastrarCurso() {
+    this.genero.id = this.idGenero;
+    this.curso.genero = this.genero;
+    this.cursoService.postCurso(this.curso).subscribe((resp: Curso) => {
+      this.curso = resp;
+      location.assign('/cursos');
+    })
   }
 
   findAllGeneros() {
@@ -39,31 +64,18 @@ export class CursoComponent implements OnInit {
     })
   }
 
-  cadastrar() {
-    this.cursoService.postCurso(this.curso).subscribe((resp: Curso) => {
-      this.curso = resp;
-      location.assign('/cursos');
+  cadastrarGenero() {
+    this.generoService.postGenero(this.genero).subscribe((resp: Genero) => {
+      this.genero = resp;
+      this.genero = new Genero();
     })
   }
 
-  nomeCurso(event: any) {
-    this.nome = event.target.value;
-  }
-
-  descricaoCurso(event: any) {
-    this.descricao = event.target.value;
-  }
-
-  // generoCurso(event: any) {
-  //   this.genero = event.target.value;
-  // }
-
-  imagemCurso(event: any) {
-    this.imagem = event.target.value;
-  }
-
-  linkCurso(event: any) {
-    this.link = event.target.value;
+  alterarGenero() {
+    this.genero.id = this.idGenero;
+    this.generoService.putGenero(this.genero).subscribe((resp: Genero) => {
+      this.genero = resp;
+    })
   }
 
 }
