@@ -75,7 +75,12 @@ export class CursoComponent implements OnInit {
     this.genero.id = this.idGenero;
     this.generoService.putGenero(this.genero).subscribe((resp: Genero) => {
       this.genero = resp;
+      this.genero = new Genero();
     })
+  }
+
+  excluirGenero() {
+    this.generoService.deleteGenero(this.idGenero).subscribe(() => { })
   }
 
 }
