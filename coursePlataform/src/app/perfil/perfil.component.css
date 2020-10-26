@@ -15,12 +15,6 @@
     color: white;
 }
 
-.botao1:hover {
-    background: #FFA14C;
-    transition: 500ms;
-    color: white;
-}
-
 .publicacao{
     width: 575px;
     box-shadow: 2px 2px 2px 2px gray;

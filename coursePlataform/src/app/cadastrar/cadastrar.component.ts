@@ -72,7 +72,7 @@ export class CadastrarComponent implements OnInit {
         setTimeout(() => {
           this.usuarioService.postUsuario(this.usuario).subscribe((resp: Usuario) => {
             this.usuario = resp;
-            this.router.navigate(['/feed'])
+            this.router.navigate(['/entrar'])
           })
         }, 2000)
       }

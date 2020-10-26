@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Postagem } from '../model/Postagem';
 import { PostagemService } from '../service/postagem.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -16,12 +16,15 @@ export class PerfilComponent implements OnInit {
   key = 'id';
   reverse = true;
 
-  constructor(private postagemService: PostagemService, private route: ActivatedRoute) { }
+  constructor(private postagemService: PostagemService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.findAllPostagens();
+
     let id = this.route.snapshot.params['id']
     this.findByIdPostagem(id);
+
+    window.scroll(0, 0)
   }
 
   findByIdPostagem(id: number) {
@@ -36,10 +39,19 @@ export class PerfilComponent implements OnInit {
     })
   }
 
+  sair() {
+    sessionStorage.clear();
+    this.router.navigate(['/entrar'])
+  }
+
   pesquisar() {
-    this.postagemService.getByTexto(this.texto).subscribe((resp: Postagem[]) => {
-      this.listaPostagens = resp;
-    })
+    if (this.texto === "") {
+      this.findAllPostagens()
+    } else {
+      this.postagemService.getByTexto(this.texto).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp;
+      })
+    }
   }
 
 }

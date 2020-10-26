@@ -2,7 +2,9 @@
 
   <div class="d-flex justify-content-around">
 
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand flex-column align-items-center d-flex justify-content-center" routerLink="/inicio">
+      <img src="assets/logo-union.png" alt="Logo da Union em gradiente">
+    </a>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
 
@@ -23,12 +25,17 @@
           <li class="nav-item ">
             <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/cursos'>Cursos</a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/feed'>Feed</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/perfil'>Perfil</a>
-          </li>
+          <div *ngIf="auth.visivel()">
+            <li class="nav-item ">
+              <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/feed'>Feed</a>
+            </li>
+          </div>
+          <div *ngIf="auth.visivel()">
+            <li class="nav-item ">
+              <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold"
+                routerLink='/perfil'>Perfil</a>
+            </li>
+          </div>
           <li class="nav-item ">
             <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold"
               routerLink='/contato'>Contato</a>
@@ -39,12 +46,14 @@
 
     </nav>
 
-    <div class="d-flex justify-content-center flex-column align-items-center dropdown" id="entrar">
-      <a class="btn outline texto p-3 text-uppercase text-monospace font-weight-bold rounded-pill dropdown-toggle"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acessar</a>
-      <div class="dropdown-menu bg-dark" id="dropdown">
-        <a class="dropdown-item rounded-pill" routerLink="/entrar">Entrar</a>
-        <a class="dropdown-item rounded-pill" routerLink="/cadastrar">Cadastrar-se</a>
+    <div *ngIf="auth.oculto()">
+      <div class="d-flex justify-content-center flex-column align-items-center dropdown" id="entrar">
+        <a class="btn outline texto p-3 text-uppercase text-monospace font-weight-bold rounded-pill dropdown-toggle"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acessar</a>
+        <div class="dropdown-menu bg-dark" id="dropdown">
+          <a class="dropdown-item rounded-pill" routerLink="/entrar">Entrar</a>
+          <a class="dropdown-item rounded-pill" routerLink="/cadastrar">Cadastrar-se</a>
+        </div>
       </div>
     </div>
 
