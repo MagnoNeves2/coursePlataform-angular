@@ -9,5 +9,5 @@ import coursePlataform.union.model.Postagem;
 
 @Repository
 public interface PostagemRepository extends JpaRepository<Postagem, Long> {
-	public List<Postagem> findAllByTextoContainingIgnoreCase(String titulo);
+	public List<Postagem> findAllByTextoContainingIgnoreCase(String texto);
 }

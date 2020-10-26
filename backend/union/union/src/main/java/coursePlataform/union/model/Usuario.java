@@ -11,6 +11,7 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
 
+
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario {

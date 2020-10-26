@@ -20,7 +20,7 @@ import coursePlataform.union.repository.CursoRepository;
 
 @RestController
 @RequestMapping("/cursos")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CursoController {
 
 	@Autowired
