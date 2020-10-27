@@ -39,11 +39,6 @@ export class PerfilComponent implements OnInit {
     })
   }
 
-  sair() {
-    sessionStorage.clear();
-    this.router.navigate(['/entrar'])
-  }
-
   pesquisar() {
     if (this.texto === "") {
       this.findAllPostagens()

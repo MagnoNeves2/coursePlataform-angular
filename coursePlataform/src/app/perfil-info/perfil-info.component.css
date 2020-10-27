@@ -1,0 +1,23 @@
+.botao {
+    background: #FFA14C;
+    color: white;
+}
+
+.botao:hover {
+    background: #EC629E;
+    transition: 500ms;
+    color: white;
+}
+
+.botao1 {
+    background: #EC629E;
+    color: white;
+}
+
+#dropdown > a {
+color: #ffffff;
+}
+
+#dropdown > a:hover {
+    color: #000000;
+    }

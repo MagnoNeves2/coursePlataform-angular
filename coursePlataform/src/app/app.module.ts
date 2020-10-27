@@ -23,6 +23,7 @@ import { ListausuariosComponent } from './adm/listausuarios/listausuarios.compon
 import { EditarCursoComponent } from './editar-curso/editar-curso.component';
 import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
 import { ListaPostComponent } from './lista-post/lista-post.component';
+import { PerfilInfoComponent } from './perfil-info/perfil-info.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ListaPostComponent } from './lista-post/lista-post.component';
     ListausuariosComponent,
     EditarCursoComponent,
     DeletarCursoComponent,
-    ListaPostComponent
+    ListaPostComponent,
+    PerfilInfoComponent
   ],
   imports: [
     BrowserModule,

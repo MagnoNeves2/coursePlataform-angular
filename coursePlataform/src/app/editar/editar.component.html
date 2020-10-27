@@ -3,32 +3,7 @@
         <div class="col-md-4 mb-3">
 
             <div class="card border-0" style="width: 18rem;">
-                <div class="d-flex justify-content-center">
-                    <img class="card-img-top rounded-circle w-75" src="https://i.imgur.com/1fiyedob.jpg?2"
-                        alt="Imagem do Perfil do Usuário">
-                </div>
-
-                <div class="card-body">
-                    <h5 class="card-title text-center">Magno de Oliveira Neves</h5>
-                    <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer
-                        preencher o
-                        conteúdo do card.</p>
-
-                    <button class="btn botao w-100 mt-2" type="button" routerLink="/feed">Feed</button>
-
-                    <div class="btn-group dropdown w-100 mt-3">
-                        <button type="button" class="btn botao dropdown-toggle" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Administração
-                        </button>
-                        <div class="dropdown-menu bg-dark" id="dropdown">
-                            <a class="dropdown-item rounded-pill" routerLink="/adm-usuarios">Lista de Usuários</a>
-                            <a class="dropdown-item rounded-pill" routerLink="/adm-cursos">Cadastrar cursos</a>
-                        </div>
-                    </div>
-
-                    <button class="btn botao1 w-100 mt-4" type="button" (click)="sair()">Sair</button>
-                </div>
+                <app-perfil-info></app-perfil-info>
             </div>
 
         </div>

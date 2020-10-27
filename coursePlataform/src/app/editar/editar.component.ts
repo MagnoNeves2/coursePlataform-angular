@@ -39,9 +39,4 @@ export class EditarComponent implements OnInit {
     this.router.navigate(['/perfil'])
   }
 
-  sair() {
-    sessionStorage.clear();
-    this.router.navigate(['/entrar'])
-  }
-  
 }
